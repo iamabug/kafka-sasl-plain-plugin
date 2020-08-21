@@ -58,7 +58,6 @@ public class MySQLAuthCallback implements AuthenticateCallbackHandler {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kafka_user_info?user=kafka&password=kafka123");
             conn = getConnection();
             statement = conn.prepareStatement("select * from users where username=? and password=?");
             statement.setString(1, username);
