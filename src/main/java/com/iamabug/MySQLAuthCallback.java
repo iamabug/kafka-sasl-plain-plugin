@@ -23,8 +23,8 @@ public class MySQLAuthCallback implements AuthenticateCallbackHandler {
         this.dataSource = new DruidDataSource();
         this.dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         this.dataSource.setUrl("jdbc:mysql://localhost:3306/kafka_user_info");
-        this.dataSource.setUsername("kafka");
-        this.dataSource.setPassword("kafka123");
+        this.dataSource.setUsername("username");
+        this.dataSource.setPassword("password");
         this.dataSource.setInitialSize(5);
         this.dataSource.setMinIdle(1);
         this.dataSource.setMaxActive(10);
